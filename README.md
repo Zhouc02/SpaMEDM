@@ -1,5 +1,5 @@
 ## Dataset
-The datasets are specifically described in "Data and code availability" section
+The datasets are specifically described in "Data and code availability" section.
 
 ## Requirement
 ### Conda envs
@@ -27,8 +27,10 @@ pip install rpy2==3.4.1
 install.packages("mclust")
 ```
 ## Reproduce
-For example:
+On your own device, for example:
 ```bash
 python main.py --data_type E15_5-S1
 ```
-All data types are shown in params.py
+All data types are shown in "params.py", you need to set your own data path in this file and may modify the h5ad file name in "preprocess.py". 
+
+We also provide our model weights and spatial domain identification results to accurately reproduce.
