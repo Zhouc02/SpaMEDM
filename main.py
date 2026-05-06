@@ -49,9 +49,6 @@ def main(args):
         adata.obsm['spatial'][:, 1] = -1 * adata.obsm['spatial'][:, 1]
     import scanpy as sc
     sc.pl.embedding(adata, basis='spatial', color='SpaMEDM', s=100, show=False)
-    sc.pp.neighbors(adata, use_rep='SpaMEDM', n_neighbors=50)
-    sc.tl.umap(adata)
-    sc.pl.umap(adata, color='SpaMEDM', s=50, show=False)
     plt.tight_layout()
     plt.show()
 

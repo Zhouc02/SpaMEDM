@@ -3,7 +3,7 @@ def params(args):
         args.n_clusters = 10
         args.mask = 0.50
         args.weight1, args.weight2, args.weight3, args.weight4 = 15, 0.01, 0.5, 2
-        args.random_seed = 2026
+        # args.random_seed = 2026  Whenever a seed is explicitly reported, it corresponds to the best single run, not the default seed
         args.pruning = True
         args.file_fold = '/root/PRAGA/Data/HLN/'
 
@@ -11,8 +11,7 @@ def params(args):
         args.n_clusters = 10
         args.mask = 0.50
         args.weight1, args.weight2, args.weight3, args.weight4 = 15, 0.5, 0.5, 0.5
-        args.random_seed = 2024
-        # args.mask = 0.25
+        # args.mask = 0.25  For parameters beyond the scope of small-scale search, we provide our small-scale search results here (weight1=15, weight2=0.01), refer to "Parameter sensitivity study" section
         # args.weight1, args.weight2, args.weight3, args.weight4 = 15, 0.01, 0.5, 1
         args.pruning = True
         args.file_fold = '/remote-home/zhouchang/PRAGA/Data/other_data/Data/HLN_D1/'
@@ -36,21 +35,21 @@ def params(args):
         args.n_clusters = 12
         args.mask = 0.50
         args.weight1, args.weight2, args.weight3, args.weight4 = 15, 0.01, 0.1, 2
-        args.random_seed = 2025
+        # args.random_seed = 2025
         args.file_fold = '/remote-home/zhouchang/PRAGA/Data/other_data/Data/E13_5-S1/'
 
     elif args.data_type == 'E11_0-S1':
         args.n_clusters = 8
         args.mask = 0.25
         args.weight1, args.weight2, args.weight3, args.weight4 = 15, 0.01, 1, 0.5
-        args.random_seed = 2022
+        # args.random_seed = 2022
         args.file_fold = '/remote-home/zhouchang/PRAGA/Data/other_data/Data/E11_0-S1/'
 
     elif args.data_type == 'Slide':
         args.n_clusters = 10
         args.mask = 0.50
         args.weight1, args.weight2, args.weight3, args.weight4 = 15, 0.01, 1, 0.5
-        args.random_seed = 2025
+        # args.random_seed = 2025
         args.pruning = True
         args.file_fold = '/root/PRAGA/Data/Slide_tag/'
 
