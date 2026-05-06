@@ -54,7 +54,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Script to modify global variable')
-    parser.add_argument('--data_type', type=str, default='Mouse_RNA_ATAC', help='data_type')
+    parser.add_argument('--data_type', type=str, default='E15_5-S1', help='data_type')
     parser.add_argument('--random_seed', type=int, default=2024, help='random_seed')
     parser.add_argument('--device', type=str, default='cuda:0', help='device')
     parser.add_argument('--tool', type=str, default='svd', choices=['mclust', 'leiden', 'louvain'], help='tool for clustering')
