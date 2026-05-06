@@ -1,1 +1,1 @@
-This folder save the traning weights
+This folder save the training weights
