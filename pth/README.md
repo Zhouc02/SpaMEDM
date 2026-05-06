@@ -1,1 +1,1 @@
-This folder save the training weights
+This folder stores the model weights
