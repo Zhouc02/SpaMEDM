@@ -21,7 +21,7 @@ def params(args):
         args.mask = 0.25
         args.weight1, args.weight2, args.weight3, args.weight4 = 10, 0.01, 0.5, 1
         # args.weight1, args.weight2, args.weight3, args.weight4 = 15, 0.01, 1, 2
-        args.random_seed = 2023
+        # args.random_seed = 2023
         args.file_fold = '/remote-home/zhouchang/PRAGA/Data/other_data/Data/E18_5-S1/'
 
     elif args.data_type == 'E15_5-S1':
