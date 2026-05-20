@@ -1,7 +1,7 @@
 This folder stores the model weights
 
 ## Usage
-You can use these weights files, for example:
+You can use these weights files, for example, in [train.py](../train.py):
 ```Python
 self.model = SpaMEDM(
     self.dim_input1, self.dim_input2,
