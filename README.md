@@ -1,5 +1,5 @@
 ## Dataset
-The datasets are specifically described in "Data and code availability" section.
+The datasets are specifically described in "Data Availability" section.
 
 ## Requirement
 ### Conda envs
