@@ -91,6 +91,15 @@ def clustering(adata, n_clusters=7, key='emb', add_key='SpatialGlue', method='mc
             res = search_res(adata, n_clusters, use_rep=key, method=method, start=start, end=end, increment=increment)
         sc.tl.louvain(adata, random_state=0, resolution=res)
         adata.obs[add_key] = adata.obs['louvain']
+    elif method == 'kmeans':
+        from sklearn.cluster import KMeans
+        if use_pca:
+            kmeans = KMeans(n_clusters=n_clusters, random_state=0, n_init=10)
+            labels = kmeans.fit_predict(adata.obsm[key + '_pca'])
+        else:
+            kmeans = KMeans(n_clusters=n_clusters, random_state=0, n_init=10)
+            labels = kmeans.fit_predict(adata.obsm[key])
+        adata.obs[add_key] = labels
 
 
 def search_res(adata, n_clusters, method='leiden', use_rep='emb', start=0.1, end=3.0, increment=0.01):
