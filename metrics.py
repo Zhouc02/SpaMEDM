@@ -1,15 +1,6 @@
-import pandas as pd
 from sklearn.metrics import normalized_mutual_info_score, mutual_info_score, adjusted_mutual_info_score
 from sklearn.metrics import v_measure_score, homogeneity_score, completeness_score
 from sklearn.metrics import adjusted_rand_score, fowlkes_mallows_score
-import numpy as np
-from sklearn import metrics
-from s_dbw import S_Dbw
-import scanpy as sc
-import squidpy as sq
-from scipy.spatial.distance import pdist, squareform
-from scipy.stats import spearmanr
-from sklearn.manifold import trustworthiness
 
 
 def metric(args, adata):
