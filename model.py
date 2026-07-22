@@ -11,7 +11,7 @@ def sce_loss(x, y, alpha=2):
     return loss.mean()
 
 
-def semantic_alignment(z1, z2):
+def directional_alignment(z1, z2):
     return 1.0 - F.cosine_similarity(z1, z2, dim=1).mean()
 
 
@@ -170,7 +170,7 @@ class SpaMEDM(nn.Module):
         loss_mae = sce_loss(rec1[mask_nodes1], x1[mask_nodes1]) + \
                    sce_loss(rec2[mask_nodes2], x2[mask_nodes2])
 
-        loss_align = semantic_alignment(z1_intra_c, z2_intra_c) if not self.single else semantic_alignment(z1_spa_c, z2_spa_c)
+        loss_align = directional_alignment(z1_intra_c, z2_intra_c) if not self.single else directional_alignment(z1_spa_c, z2_spa_c)
 
         C_pred = torch.sigmoid(torch.mm(z_fused_m, z_fused_m.t()))
         loss_graph = F.mse_loss(C_pred, adj_spa1) + F.mse_loss(C_pred, adj_spa2)
