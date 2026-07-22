@@ -31,6 +31,8 @@ On your own device, for example:
 ```bash
 python main.py --data_type E15_5-S1
 ```
+A specific [tutorial](./Supplementary/Tutorial/Tutorial.ipynb) is provided, which can reproduce most types of results.
+
 All data types are shown in [params.py](./params.py), you need to set your own data path in this file and may modify the h5ad file name in [preprocess.py](./preprocess.py). 
 
 We also provide our [model weights](./pth) and spatial domain identification [results](./results).
