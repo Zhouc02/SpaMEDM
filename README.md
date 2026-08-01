@@ -19,9 +19,9 @@ pip install numpy==1.22.3
 conda install matplotlib=3.4.3
 pip install --user scikit-misc
 pip install leidenalg
-pip install s-dbw
 pip install rpy2==3.4.1
 ```
+We noticed that installing this version of PyTorch after 2026 may automatically install the latest version of the MKL library, which could cause compatibility issues. You may need to manually downgrade it, for example, ```mkl=2022.1.0```.
 ### R envs
 ```bash
 install.packages("mclust")
